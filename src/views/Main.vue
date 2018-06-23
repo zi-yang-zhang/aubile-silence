@@ -1,12 +1,14 @@
 <template>
 	<div class="main">
-		<nav class="navigator">
-			<div>Audible Silence</div>
-			<router-link :to="{ name: 'home'}">Home</router-link>
-			<router-link :to="{ name: 'gallery'}">Gallery</router-link>
-			<router-link :to="{ name: 'about'}">About</router-link>
+		<div class="header">
+			<div class="title">Audible Silence</div>
+			<nav class="navigator">
+				<router-link :to="{ name: 'home'}">Home</router-link>
+				<router-link :to="{ name: 'gallery'}">Gallery</router-link>
+				<router-link :to="{ name: 'about'}">About</router-link>
+			</nav>
+		</div>
 
-		</nav>
 		<div class="content">
 			<router-view/>
 		</div>
@@ -32,25 +34,30 @@ export default {
   left: 0px;
 }
 
-.navigator {
+.header {
   position: relative;
   width: 100%;
-  height: auto;
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: center;
-  div {
-    padding: 15px;
-    font-size: 24px;
+
+  .title {
+    padding: 10px;
+    font-size: 20px;
     color: rgb(244, 244, 244);
   }
-  a {
-    padding: 40px;
-    font-size: 20px;
-    color: rgb(196, 196, 196);
-    text-decoration: none;
+  .navigator {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      padding: 10px;
+      font-size: 16px;
+      color: rgb(196, 196, 196);
+      text-decoration: none;
+    }
   }
 }
+
 .content {
   width: 100%;
   height: auto;
