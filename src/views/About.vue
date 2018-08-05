@@ -1,6 +1,7 @@
 <template>
 	<div class="about">
-		<h3>About</h3>
+		<h3>An enthuastic Engineer</h3>
+		<h3>An enthuastic Photographer</h3>
 	</div>
 
 </template>
@@ -13,6 +14,10 @@ export default {
 <style scoped lang="less">
 .about {
   width: 100%;
-  height: auto;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  align-items: center;
+  color: rgb(201, 201, 201);
 }
 </style>
